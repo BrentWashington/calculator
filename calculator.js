@@ -46,5 +46,9 @@ deleteButton.addEventListener("click", () => {
 
 // Displays the operands on the screen
 function updateScreen(value) {
-    screen.textContent = value;
+    if (displayValue == "") {
+        screen.textContent = 0;
+    } else {
+        screen.textContent = value;
+    }
 }

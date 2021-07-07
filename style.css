@@ -1,28 +1,67 @@
+body {
+    background-color: skyblue;
+}
+
+#credit {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+    transition: font-size 1s;
+}
+
+a:hover {
+    color: white;
+    font-size: larger;
+}
+
 #calculator-body {
-    background-color: gray;
+    display: block;
+    background-color: rgba(80, 80, 80, 1);
+    border-style: outset;
+    border-radius: 15px;
+    border-width: 5px;
+    box-shadow: 8px 8px;
     padding: 15px;
-    margin: 5%;
-    width: 22rem;
-    height: 30rem;
+    margin: auto;
+    width: 20rem;
 }
 
 #calculator-screen {
-    background-color: silver;
+    display: flex;
+    background-color: rgba(70, 70, 70, 1);
+    color: white;
     font-size: larger;
-    text-align: end;
-    height: 3rem;
+    align-items: center;
+    justify-content: right;
+    padding: 20px 10px;
+    margin-bottom: 0;
+    font-size: x-large;
+
+}
+
+button {
+    background-color: rgba(85, 85, 85, 1);
+    border-color: black;
+    border-radius: 25px;
+    color: white;
+    height: 45px;
+    font-size: large;
 }
 
 #buttons-group {
     display: grid;
+    gap: 20px;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: 
-    "screen screen screen screen"
-    "clear clear delete delete"
-    "seven eight nine divide"
-    "four five six multiply"
-    "one two three subtract"
-    "zero decimal equals add";
+    grid-template-areas:
+        "screen screen screen screen"
+        "clear clear delete delete"
+        "seven eight nine divide"
+        "four five six multiply"
+        "one two three subtract"
+        "zero decimal equals add";
 }
 
 #calculator-screen {
@@ -31,10 +70,12 @@
 
 #clear-button {
     grid-area: clear;
+    background-color: darkgray;
 }
 
 #delete-button {
     grid-area: delete;
+    background-color: red;
 }
 
 #decimal-button {
@@ -99,4 +140,5 @@
 
 #equals-button {
     grid-area: equals;
+    background-color:limegreen;
 }
